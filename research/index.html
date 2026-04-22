@@ -45,7 +45,7 @@
         <li>
           <a href="https://github.com/enfilade-labs/CVE-2026-20687-AppleJPEGDriver-UAF" target="_blank" rel="noopener">
             <span class="cve-id">CVE-2026-20687</span>
-            <span class="cve-title">AppleJPEGDriver startDecoder — UAF</span>
+            <span class="cve-title">AppleJPEGDriver startDecoder — Use-After-Free</span>
             <span class="cve-meta">iOS 26.4</span>
           </a>
         </li>
@@ -60,8 +60,8 @@
           <span class="brief-date">2026-04</span>
           <span class="brief-target">iOS 26.x</span>
         </header>
-        <h2 class="brief-title">iOS Kernel — Use-After-Free</h2>
-        <p class="brief-body">Destructor-order use-after-free in <span class="kext">IOSurface</span>. An object is unlinked and freed during its own teardown path before the base-destructor chain completes.</p>
+        <h2 class="brief-title">IOSurface — Destructor-Order Use-After-Free</h2>
+        <p class="brief-body">An object is unlinked and freed during its own teardown path before the base-destructor chain completes.</p>
         <p class="brief-meta">Research stage</p>
       </article>
 
@@ -71,8 +71,8 @@
           <span class="brief-date">2026-04</span>
           <span class="brief-target">iOS 26.x</span>
         </header>
-        <h2 class="brief-title">iOS Kernel — Information Disclosure</h2>
-        <p class="brief-body">Out-of-bounds read in <span class="kext">AppleJPEGDriver</span>. A user-controlled length field in the decode path is not bounds-checked against the in-bounds tail size. Triggerable from app sandbox with no entitlements.</p>
+        <h2 class="brief-title">AppleJPEGDriver — Out-of-Bounds Read</h2>
+        <p class="brief-body">A user-controlled length field in the decode path is not bounds-checked against the in-bounds tail size. Triggerable from app sandbox with no entitlements.</p>
         <p class="brief-meta">Reproducible PoC</p>
       </article>
 
@@ -82,8 +82,8 @@
           <span class="brief-date">2026-04</span>
           <span class="brief-target">iOS 26.x</span>
         </header>
-        <h2 class="brief-title">iOS Kernel — Use-After-Free</h2>
-        <p class="brief-body">Input-lifetime use-after-free in <span class="kext">AppleJPEGDriver</span>. Pointers into caller-owned <code>externalMethod</code> input storage are retained in a queued request and dereferenced after the storage has gone out of scope. Triggerable from app sandbox with no entitlements.</p>
+        <h2 class="brief-title">AppleJPEGDriver — Input-Lifetime Use-After-Free</h2>
+        <p class="brief-body">Pointers into caller-owned <code>externalMethod</code> input storage are retained in a queued request and dereferenced after the storage has gone out of scope. Triggerable from app sandbox with no entitlements.</p>
         <p class="brief-meta">Reproducible PoC</p>
       </article>
 
@@ -93,8 +93,8 @@
           <span class="brief-date">2026-04</span>
           <span class="brief-target">iOS 26.x</span>
         </header>
-        <h2 class="brief-title">iOS Kernel — Use-After-Free</h2>
-        <p class="brief-body">Stack-lifetime use-after-free in <span class="kext">AppleJPEGDriver</span>. Pointers to stack-resident encode data are retained across function return in a queued request path. Triggerable from app sandbox with no entitlements.</p>
+        <h2 class="brief-title">AppleJPEGDriver — Stack-Lifetime Use-After-Free</h2>
+        <p class="brief-body">Pointers to stack-resident encode data are retained across function return in a queued request path. Triggerable from app sandbox with no entitlements.</p>
         <p class="brief-meta">Reproducible PoC</p>
       </article>
     </section>
