@@ -214,6 +214,10 @@ body.subpage main.page {
   color: var(--fg);
 }
 
+.brief-target {
+  color: var(--fg-dim);
+}
+
 .brief-title {
   font-family: var(--sans);
   font-size: clamp(1rem, 1.4vw, 1.15rem);
