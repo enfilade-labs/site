@@ -231,6 +231,20 @@ body.subpage main.page {
   margin-bottom: 0.9rem;
 }
 
+.brief-body .kext {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  letter-spacing: 0.01em;
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+.brief-body code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  color: var(--fg);
+}
+
 .brief-meta {
   font-family: var(--mono);
   font-size: 0.68rem;

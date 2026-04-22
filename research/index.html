@@ -39,7 +39,7 @@
           <span class="brief-date">2026-04</span>
         </header>
         <h2 class="brief-title">iOS Kernel — Use-After-Free</h2>
-        <p class="brief-body">Use-after-free in a privileged iOS kernel-mode component, reachable from sandboxed userland.</p>
+        <p class="brief-body">Destructor-order use-after-free in <span class="kext">IOSurface</span>. An object is unlinked and freed during its own teardown path before the base-destructor chain completes.</p>
         <p class="brief-meta">Research stage</p>
       </article>
 
@@ -49,7 +49,7 @@
           <span class="brief-date">2026-04</span>
         </header>
         <h2 class="brief-title">iOS Kernel — Information Disclosure</h2>
-        <p class="brief-body">Out-of-bounds read in a privileged iOS kernel-mode component. Reachable from app sandbox with no entitlements.</p>
+        <p class="brief-body">Out-of-bounds read in <span class="kext">AppleJPEGDriver</span>. A user-controlled length field in the decode path is not bounds-checked against the in-bounds tail size. Triggerable from app sandbox with no entitlements.</p>
         <p class="brief-meta">Reproducible PoC</p>
       </article>
 
@@ -59,7 +59,7 @@
           <span class="brief-date">2026-04</span>
         </header>
         <h2 class="brief-title">iOS Kernel — Use-After-Free</h2>
-        <p class="brief-body">Use-after-free in a privileged iOS kernel-mode component. Reachable from app sandbox with no entitlements.</p>
+        <p class="brief-body">Input-lifetime use-after-free in <span class="kext">AppleJPEGDriver</span>. Pointers into caller-owned <code>externalMethod</code> input storage are retained in a queued request and dereferenced after the storage has gone out of scope. Triggerable from app sandbox with no entitlements.</p>
         <p class="brief-meta">Reproducible PoC</p>
       </article>
 
@@ -69,7 +69,7 @@
           <span class="brief-date">2026-04</span>
         </header>
         <h2 class="brief-title">iOS Kernel — Use-After-Free</h2>
-        <p class="brief-body">Use-after-free in a privileged iOS kernel-mode component. Reachable from app sandbox with no entitlements.</p>
+        <p class="brief-body">Stack-lifetime use-after-free in <span class="kext">AppleJPEGDriver</span>. Pointers to stack-resident encode data are retained across function return in a queued request path. Triggerable from app sandbox with no entitlements.</p>
         <p class="brief-meta">Reproducible PoC</p>
       </article>
     </section>
