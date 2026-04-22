@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research — Enfilade</title>
+  <meta name="description" content="Recent findings. Enfilade — independent vulnerability research." />
+  <meta name="theme-color" content="#000000" />
+
+  <meta property="og:title" content="Enfilade — Research" />
+  <meta property="og:description" content="Recent findings." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://enfilade.io/research/" />
+  <meta property="og:image" content="https://enfilade.io/assets/header-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="/assets/logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="subpage">
+  <header class="site-header">
+    <a href="/" class="site-mark">ENFILADE</a>
+  </header>
+
+  <main class="page">
+    <h1 class="page-heading">Research</h1>
+
+    <section class="page-intro">
+      <p>Ongoing vulnerability research, primarily on iOS and adjacent surfaces. Entries below are brief summaries. Full technical briefs — target subsystem, trigger context, primitive analysis, kernel state at failure — are shared with qualified buyers on request.</p>
+    </section>
+
+    <section class="research-list">
+      <article class="brief">
+        <header class="brief-head">
+          <span class="brief-id">EN-0001</span>
+          <span class="brief-date">2026-04</span>
+        </header>
+        <h2 class="brief-title">iOS Kernel — Memory Safety</h2>
+        <p class="brief-body">Use-after-free in a privileged kernel-mode component, reachable from a sandboxed userland privilege. Object is consumed during its own teardown path, producing a stale-pointer release primitive. Reclaim window and weaponization not yet proven.</p>
+        <p class="brief-meta">Research stage · Unconfirmed exploitable</p>
+      </article>
+    </section>
+
+    <section class="inline-contact">
+      <p>Inquiries: <a href="mailto:contact@enfilade.io">contact@enfilade.io</a> · <a href="/assets/enfilade-pgp.asc">PGP</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Enfilade Research LLC</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
