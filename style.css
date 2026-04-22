@@ -190,6 +190,94 @@ body.subpage main.page {
   gap: 0;
 }
 
+.section-heading {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 1.5rem;
+}
+
+.disclosures {
+  display: flex;
+  flex-direction: column;
+}
+
+.cve-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cve-list li {
+  border-top: 1px solid var(--rule);
+}
+
+.cve-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.cve-list a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.cve-list a:hover,
+.cve-list a:focus-visible {
+  outline: none;
+}
+
+.cve-list a:hover .cve-title,
+.cve-list a:focus-visible .cve-title {
+  color: var(--accent);
+}
+
+.cve-id {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+.cve-title {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--fg-dim);
+  transition: color 160ms ease;
+}
+
+.cve-meta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .cve-list a {
+    grid-template-columns: auto auto;
+    row-gap: 0.3rem;
+  }
+
+  .cve-title {
+    grid-column: 1 / -1;
+    font-size: 0.9rem;
+  }
+}
+
 .brief {
   border-top: 1px solid var(--rule);
   padding: 2rem 0;
