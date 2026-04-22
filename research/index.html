@@ -29,18 +29,48 @@
     <h1 class="page-heading">Research</h1>
 
     <section class="page-intro">
-      <p>Ongoing vulnerability research, primarily on iOS and adjacent surfaces. Entries below are brief summaries. Full technical briefs — target subsystem, trigger context, primitive analysis, kernel state at failure — are shared with qualified buyers on request.</p>
+      <p>Ongoing vulnerability research, primarily on iOS and adjacent surfaces. Entries below are brief summaries. Full technical briefs are shared with qualified buyers under NDA.</p>
     </section>
 
     <section class="research-list">
       <article class="brief">
         <header class="brief-head">
+          <span class="brief-id">EN-0004</span>
+          <span class="brief-date">2026-04</span>
+        </header>
+        <h2 class="brief-title">iOS Kernel — Use-After-Free</h2>
+        <p class="brief-body">Use-after-free in a privileged iOS kernel-mode component, reachable from sandboxed userland.</p>
+        <p class="brief-meta">Research stage</p>
+      </article>
+
+      <article class="brief">
+        <header class="brief-head">
+          <span class="brief-id">EN-0003</span>
+          <span class="brief-date">2026-04</span>
+        </header>
+        <h2 class="brief-title">iOS Kernel — Information Disclosure</h2>
+        <p class="brief-body">Out-of-bounds read in a privileged iOS kernel-mode component. Reachable from app sandbox with no entitlements.</p>
+        <p class="brief-meta">Reproducible PoC</p>
+      </article>
+
+      <article class="brief">
+        <header class="brief-head">
+          <span class="brief-id">EN-0002</span>
+          <span class="brief-date">2026-04</span>
+        </header>
+        <h2 class="brief-title">iOS Kernel — Use-After-Free</h2>
+        <p class="brief-body">Use-after-free in a privileged iOS kernel-mode component. Reachable from app sandbox with no entitlements.</p>
+        <p class="brief-meta">Reproducible PoC</p>
+      </article>
+
+      <article class="brief">
+        <header class="brief-head">
           <span class="brief-id">EN-0001</span>
           <span class="brief-date">2026-04</span>
         </header>
-        <h2 class="brief-title">iOS Kernel — Memory Safety</h2>
-        <p class="brief-body">Use-after-free in a privileged kernel-mode component, reachable from a sandboxed userland privilege. Object is consumed during its own teardown path, producing a stale-pointer release primitive. Reclaim window and weaponization not yet proven.</p>
-        <p class="brief-meta">Research stage · Unconfirmed exploitable</p>
+        <h2 class="brief-title">iOS Kernel — Use-After-Free</h2>
+        <p class="brief-body">Use-after-free in a privileged iOS kernel-mode component. Reachable from app sandbox with no entitlements.</p>
+        <p class="brief-meta">Reproducible PoC</p>
       </article>
     </section>
 
