@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enfilade — Vulnerability Research</title>
+  <meta name="description" content="Independent vulnerability research." />
+  <meta name="theme-color" content="#000000" />
+
+  <meta property="og:title" content="Enfilade" />
+  <meta property="og:description" content="Independent vulnerability research." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://enfilade.io" />
+  <meta property="og:image" content="https://enfilade.io/assets/header-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="/assets/logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <img src="/assets/header-logo.png" alt="Enfilade — Vulnerability Research" class="header-logo" />
+    </header>
+
+    <section class="intro">
+      <p>Independent vulnerability research.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:contact@enfilade.io">contact@enfilade.io</a></p>
+      <p class="pgp">
+        <a href="/assets/enfilade-pgp.asc">PGP public key</a>
+        <span class="fingerprint">FINGERPRINT PLACEHOLDER — REPLACE BEFORE LAUNCH</span>
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Enfilade Research LLC</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
